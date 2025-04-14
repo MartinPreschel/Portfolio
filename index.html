@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Martin Preschel – Data Analytics Portfolio</title>
+  <meta name="description" content="Portfolio von Martin Preschel – Junior Data Analyst mit Fokus auf UX und Datenvisualisierung.">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -12,43 +13,77 @@
       background-color: #f9f9f9;
       color: #333;
     }
+
     header {
       background-color: #282c34;
       color: white;
       padding: 2rem 1rem;
       text-align: center;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: white; /* Bessere Lesbarkeit */
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
     nav a {
       margin: 0 1rem;
       color: #61dafb;
       text-decoration: none;
+      font-weight: bold;
     }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     main {
       padding: 2rem;
       max-width: 900px;
       margin: auto;
     }
+
     section {
       margin-bottom: 3rem;
     }
-    h1, h2 {
+
+    h2 {
       color: #2c3e50;
     }
+
     footer {
       background-color: #f1f1f1;
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
     }
+
     iframe {
       border: none;
       margin-top: 1rem;
     }
+
     a {
       color: #0077cc;
     }
+
     a:hover {
       text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+      main {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -67,7 +102,9 @@
   <main>
     <section id="about">
       <h2>About Me</h2>
-      <p>I’m Martin Preschel, a data analyst with a background in industrial design. I bring together data analytics and a user-focused mindset to drive meaningful insights and solutions. With experience in tools like Python, SQL, Tableau, and Excel, I help businesses understand complex problems through data-driven narratives. I am currently seeking a junior analyst role where I can contribute to impactful, user-centered projects.</p>
+      <p>
+        I’m Martin Preschel, a data analyst with a background in industrial design. I bring together data analytics and a user-focused mindset to drive meaningful insights and solutions. With experience in tools like Python, SQL, Tableau, and Excel, I help businesses understand complex problems through data-driven narratives. I am currently seeking a junior analyst role where I can contribute to impactful, user-centered projects.
+      </p>
     </section>
 
     <section id="projects">
@@ -81,28 +118,28 @@
       </ul>
     </section>
 
-<section id="resume">
-  <h2>Portfolio PDF</h2>
-  <p>
-    <a href="Data_Analytics_Portfolio_Martin_Preschel_2025_Small_Version.pdf" download>
-      Download My Portfolio (PDF)
-    </a>
-  </p>
-  <iframe 
-    src="Data_Analytics_Portfolio_Martin_Preschel_2025_Small_Version.pdf" 
-    width="100%" 
-    height="600px" 
-    title="Martin Preschel Portfolio PDF">
-  </iframe>
-</section>
+    <section id="resume">
+      <h2>Portfolio PDF</h2>
+      <p>
+        <a href="Data_Analytics_Portfolio_Martin_Preschel_2025_Small_Version.pdf" download>
+          Download My Portfolio (PDF)
+        </a>
+      </p>
+      <iframe 
+        src="Data_Analytics_Portfolio_Martin_Preschel_2025_Small_Version.pdf" 
+        width="100%" 
+        height="600px" 
+        title="Martin Preschel Portfolio PDF">
+      </iframe>
+    </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:martin.preschel@gmail.com">martin.preschel@gmail.com</a></p>
       <p>Location: Hamburg, Germany</p>
-      <p>Social: 
-        <a href="https://www.linkedin.com/in/martin-preschel-2292781a0" target="_blank">LinkedIn</a> | 
-        <a href="https://github.com/MartinPreschel" target="_blank">GitHub</a> | 
+      <p>Social:
+        <a href="https://www.linkedin.com/in/martin-preschel-2292781a0" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/MartinPreschel" target="_blank">GitHub</a> |
         <a href="https://public.tableau.com/app/profile/martin.preschel/vizzes" target="_blank">Tableau</a>
       </p>
     </section>
@@ -110,9 +147,10 @@
     <section id="impressum">
       <h2>Impressum</h2>
       <p>Martin Preschel<br />
-      Hamburg, Germany<br />
-      Email: martin.preschel@gmail.com<br />
-      Website: martinpreschel.github.io</p>
+        Hamburg, Germany<br />
+        Email: martin.preschel@gmail.com<br />
+        Website: <a href="https://martinpreschel.github.io/Portfolio" target="_blank">martinpreschel.github.io</a>
+      </p>
     </section>
   </main>
 
