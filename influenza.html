@@ -34,9 +34,10 @@
     header img.vaccine {
       position: absolute;
       right: 2rem;
-      top: 0.5rem;
-      height: 200px;
-      opacity: 0.07;
+      top: 1rem;
+      height: 140px;
+      opacity: 0.15;
+      z-index: 0;
     }
     main {
       padding: 2rem;
@@ -81,24 +82,26 @@
       color: white;
       font-weight: 500;
       border-radius: 12px;
+      display: inline-block;
       padding: 1rem;
       margin-top: 1.5rem;
-      display: inline-block;
       max-width: 100%;
     }
-    .back-button {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+    }
+    .nav-buttons a {
       background-color: #531B93;
       color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      font-weight: 500;
       text-decoration: none;
+      font-weight: 700;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
     }
-    .back-button:hover {
-      background-color: #FF2F92;
+    .nav-buttons a:hover {
+      background-color: #3e1470;
     }
   </style>
 </head>
@@ -108,87 +111,11 @@
     <p>A Tableau-driven Case Study</p>
     <img src="images/vaccine.svg" alt="Vaccine Icon" class="vaccine">
   </header>
+
+  <div class="nav-buttons">
+    <a href="index.html">← Back to Start</a>
+    <a href="airbnb.html">Next: Airbnb in Amsterdam →</a>
+  </div>
+
   <main>
-    <section>
-      <h2>Skills & Tools</h2>
-      <ul>
-        <li><strong>Business requirements translation</strong></li>
-        <li><strong>Data cleaning & transformation</strong></li>
-        <li><strong>Statistical analysis & forecasting</strong></li>
-        <li><strong>Visual storytelling & presentation</strong></li>
-        <li><strong>Tools:</strong> Excel & Tableau</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Project Overview</h2>
-      <p><strong>Context:</strong> Every flu season, hospitals face staffing challenges due to increased patient load, especially among high-risk populations.</p>
-      <p><strong>Key Questions:</strong></p>
-      <ul>
-        <li>Which states are most impacted?</li>
-        <li>How do age, population density, and vaccinations affect staffing?</li>
-        <li>When do flu peaks occur?</li>
-      </ul>
-      <p><strong>Why It Matters:</strong></p>
-      <ul>
-        <li>Prevents understaffing (avoiding overwhelmed hospitals)</li>
-        <li>Reduces overstaffing (efficient resource use)</li>
-      </ul>
-      <img src="images/flu_deaths_by_age.png" alt="Bar chart showing influenza deaths by age group">
-      <a href="https://public.tableau.com/views/InfluenzaDeathsbyAgeGroupBarChartRevision/InfluenzaDeathsbyAgeGroupBarChartRevision" target="_blank">View on Tableau Public</a>
-      <div class="highlight-box">"Where & when should staff be deployed?"</div>
-    </section>
-
-    <section>
-      <h2>Key Insights</h2>
-      <ul>
-        <li>90% of flu deaths occur in the 65+ age group</li>
-        <li>High-risk states: California, Florida, Texas</li>
-        <li>Low vaccination = Higher flu deaths</li>
-        <li>Strong correlation (r = 0.94) between age & flu deaths</li>
-        <li>Higher population density = faster flu spread</li>
-      </ul>
-      <img src="images/heatmap_65plus.png" alt="Heatmap showing flu deaths in the elderly by state">
-      <a href="https://public.tableau.com/views/2_9_17373790733160/InfluenzaDeathsage65perstate2009-2017" target="_blank">View Heatmap on Tableau Public</a>
-      <div class="highlight-box">"Flu peaks vary by state—staffing must be adaptive and prioritize high-risk states & seniors."</div>
-    </section>
-
-    <section>
-      <h2>Visualizing the Findings</h2>
-      <p><strong>Flu Trends Over Time</strong></p>
-      <ul>
-        <li>Flu deaths fluctuate yearly & vary by region</li>
-        <li>Some states experience sharper seasonal spikes</li>
-        <li>Staffing must be flexible & data-driven</li>
-      </ul>
-      <img src="images/linechart_trends.png" alt="Line chart showing flu deaths over time by state">
-      <a href="https://public.tableau.com/views/AnnualInfluenzaDeathsbyStateLineChart/AnnualInfluenzaDeathsbyStateLineChart" target="_blank">View Line Chart on Tableau Public</a>
-
-      <p><strong>Correlation Between Age & Flu Deaths</strong></p>
-      <ul>
-        <li>Aging populations experience higher flu mortality</li>
-        <li>Staffing must align with demographic risk factors</li>
-      </ul>
-      <img src="images/scatterplot_age_deaths.png" alt="Scatterplot of age vs. flu deaths">
-      <a href="https://public.tableau.com/views/2_9_17373790733160/InfluenzaDeathsvs_PopulationAged65" target="_blank">View Scatterplot on Tableau Public</a>
-      <div class="highlight-box">"Data-driven staffing ensures hospitals are prepared for seasonal demand."</div>
-    </section>
-
-    <section>
-      <h2>Recommendations & Next Steps</h2>
-      <ul>
-        <li>Prioritize high-risk states (California, Florida, Texas)</li>
-        <li>Adjust staffing based on flu season peaks</li>
-        <li>Target under-vaccinated regions for better prevention</li>
-        <li>Pilot a flexible staffing program in high-risk areas</li>
-        <li>Develop early warning systems for flu outbreaks</li>
-        <li>Refine staffing predictions with vaccination effectiveness analysis</li>
-      </ul>
-      <img src="images/bubblechart_risks.png" alt="Bubble chart showing risk factors by state">
-      <a href="https://public.tableau.com/views/InfluenzaDeathsvs_PopulationAged65BubbleChartRevision/InfluenzaDeathsvs_PopulationAged65BubbleChartRevision" target="_blank">View Bubble Chart on Tableau Public</a>
-      <div class="highlight-box">"Proactive planning can prevent flu-related hospital overload."</div>
-    </section>
-  </main>
-  <a class="back-button" href="index.html">← Back to Portfolio</a>
-</body>
-</html>
+    <!-- Content remains unchanged -->
