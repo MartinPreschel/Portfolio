@@ -8,70 +8,99 @@
   <style>
     body {
       font-family: 'Roboto Mono', monospace;
-      background: linear-gradient(to bottom right, #e6e6e6, #ffffff);
+      background: linear-gradient(135deg, #e6e6e6, #ffffff);
       color: #333;
       margin: 0;
       padding: 0;
     }
     header {
-      background-color: #282c34;
-      color: white;
+      background: #ffffff;
       text-align: center;
       padding: 2rem 1rem;
+      position: relative;
+    }
+    header h1 {
+      font-weight: 700;
+      font-size: 2rem;
+      background: linear-gradient(to right, #FF2F92, #531B93);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0;
+    }
+    header p {
+      font-weight: 400;
+      font-size: 1rem;
+    }
+    header img.vaccine {
+      position: absolute;
+      right: 2rem;
+      top: 1rem;
+      height: 140px;
+      opacity: 0.15;
     }
     main {
       padding: 2rem;
       max-width: 900px;
       margin: auto;
     }
-    h1, h2, h3 {
+    h2 {
+      font-size: 1.5rem;
       font-weight: 700;
-      background: linear-gradient(to right, #531B93, #FF2F92);
+      background: linear-gradient(to right, #FF2F92, #531B93);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    strong {
-      font-weight: 500;
+    h3 {
+      font-weight: 700;
+      color: #2c3e50;
     }
     section {
       margin-bottom: 3rem;
     }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    p strong, ul strong {
+      font-weight: 500;
+    }
     img {
       width: 100%;
       height: auto;
-      margin-top: 1rem;
+      margin: 1rem 0 0.25rem 0;
     }
     a {
       color: #0077cc;
+      display: block;
+      margin-top: 0.25rem;
     }
     a:hover {
       text-decoration: underline;
     }
     .highlight-box {
-      background: linear-gradient(to right, #531B93, #FF2F92);
+      background: linear-gradient(to right, #FF2F92, #531B93);
       color: white;
-      padding: 1rem;
-      margin-top: 1rem;
-      border-radius: 8px;
       font-weight: 500;
-      text-align: center;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-top: 1.5rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Influenza – Preparing for Flu Season</h1>
+    <h1>Influenza – Preparing for Flu U.S. Season</h1>
     <p>A Tableau-driven Case Study</p>
+    <img src="images/vaccine.svg" alt="Vaccine Icon" class="vaccine">
   </header>
   <main>
     <section>
       <h2>Skills & Tools</h2>
       <ul>
-        <li>Business requirements translation</li>
-        <li>Data cleaning & transformation</li>
-        <li>Statistical analysis & forecasting</li>
-        <li>Visual storytelling & presentation</li>
-        <li>Tools: Excel & Tableau</li>
+        <li><strong>Business requirements translation</strong></li>
+        <li><strong>Data cleaning & transformation</strong></li>
+        <li><strong>Statistical analysis & forecasting</strong></li>
+        <li><strong>Visual storytelling & presentation</strong></li>
+        <li><strong>Tools:</strong> Excel & Tableau</li>
       </ul>
     </section>
 
@@ -89,8 +118,9 @@
         <li>Prevents understaffing (avoiding overwhelmed hospitals)</li>
         <li>Reduces overstaffing (efficient resource use)</li>
       </ul>
-      <a href="https://public.tableau.com/views/InfluenzaDeathsbyAgeGroupBarChartRevision/InfluenzaDeathsbyAgeGroupBarChartRevision" target="_blank">View on Tableau Public</a>
       <img src="images/flu_deaths_by_age.png" alt="Bar chart showing influenza deaths by age group">
+      <a href="https://public.tableau.com/views/InfluenzaDeathsbyAgeGroupBarChartRevision/InfluenzaDeathsbyAgeGroupBarChartRevision" target="_blank">View on Tableau Public</a>
+      <div class="highlight-box">"Where & when should staff be deployed?"</div>
     </section>
 
     <section>
@@ -102,17 +132,30 @@
         <li>Strong correlation (r = 0.94) between age & flu deaths</li>
         <li>Higher population density = faster flu spread</li>
       </ul>
-      <a href="https://public.tableau.com/views/2_9_17373790733160/Influenzadeathsage65perstate2009-2017" target="_blank">View Heatmap on Tableau Public</a>
       <img src="images/heatmap_65plus.png" alt="Heatmap showing flu deaths in the elderly by state">
+      <a href="https://public.tableau.com/views/2_9_17373790733160/InfluenzaDeathsage65perstate2009-2017" target="_blank">View Heatmap on Tableau Public</a>
+      <div class="highlight-box">"Flu peaks vary by state—staffing must be adaptive and prioritize high-risk states & seniors."</div>
     </section>
 
     <section>
       <h2>Visualizing the Findings</h2>
-      <p>Flu deaths fluctuate yearly & vary by region. Some states experience sharper seasonal spikes. Staffing must be flexible & data-driven.</p>
-      <a href="https://public.tableau.com/views/AnnualInfluenzaDeathsbyStateLineChart/AnnualInfluenzaDeathsbyStateLineChart" target="_blank">View Line Chart on Tableau Public</a>
+      <p><strong>Flu Trends Over Time</strong></p>
+      <ul>
+        <li>Flu deaths fluctuate yearly & vary by region</li>
+        <li>Some states experience sharper seasonal spikes</li>
+        <li>Staffing must be flexible & data-driven</li>
+      </ul>
       <img src="images/linechart_trends.png" alt="Line chart showing flu deaths over time by state">
-      <a href="https://public.tableau.com/views/2_9_17373790733160/InfluenzaDeathsvs_PopulationAged65" target="_blank">View Scatterplot on Tableau Public</a>
+      <a href="https://public.tableau.com/views/AnnualInfluenzaDeathsbyStateLineChart/AnnualInfluenzaDeathsbyStateLineChart" target="_blank">View Line Chart on Tableau Public</a>
+
+      <p><strong>Correlation Between Age & Flu Deaths</strong></p>
+      <ul>
+        <li>Aging populations experience higher flu mortality</li>
+        <li>Staffing must align with demographic risk factors</li>
+      </ul>
       <img src="images/scatterplot_age_deaths.png" alt="Scatterplot of age vs. flu deaths">
+      <a href="https://public.tableau.com/views/2_9_17373790733160/InfluenzaDeathsvs_PopulationAged65" target="_blank">View Scatterplot on Tableau Public</a>
+      <div class="highlight-box">"Data-driven staffing ensures hospitals are prepared for seasonal demand."</div>
     </section>
 
     <section>
@@ -125,13 +168,10 @@
         <li>Develop early warning systems for flu outbreaks</li>
         <li>Refine staffing predictions with vaccination effectiveness analysis</li>
       </ul>
-      <a href="https://public.tableau.com/views/InfluenzaDeathsvs_PopulationAged65BubbleChartRevision/InfluenzaDeathsvs_PopulationAged65BubbleChartRevision" target="_blank">View Bubble Chart on Tableau Public</a>
       <img src="images/bubblechart_risks.png" alt="Bubble chart showing risk factors by state">
+      <a href="https://public.tableau.com/views/InfluenzaDeathsvs_PopulationAged65BubbleChartRevision/InfluenzaDeathsvs_PopulationAged65BubbleChartRevision" target="_blank">View Bubble Chart on Tableau Public</a>
+      <div class="highlight-box">"Proactive planning can prevent flu-related hospital overload."</div>
     </section>
-
-    <div class="highlight-box">
-      "Where & when should staff be deployed?"
-    </div>
   </main>
 </body>
 </html>
