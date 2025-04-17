@@ -4,48 +4,71 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Martin Preschel – Data Analytics Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto Mono', monospace;
+      background: linear-gradient(135deg, #e6e6e6, #ffffff);
+      color: #333;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
     }
     header {
-      background-color: #282c34;
-      color: white;
-      padding: 2rem 1rem;
+      background: #ffffff;
       text-align: center;
+      padding: 2rem 1rem;
+      position: relative;
     }
     header h1 {
-      color: white;
+      font-weight: 700;
+      font-size: 2rem;
+      background: linear-gradient(to right, #FF2F92, #531B93);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0;
+    }
+    header p {
+      font-weight: 400;
+      font-size: 1rem;
+    }
+    nav {
+      margin-top: 1rem;
     }
     nav a {
       margin: 0 1rem;
-      color: #61dafb;
+      color: #531B93;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     main {
       padding: 2rem;
       max-width: 900px;
       margin: auto;
+      z-index: 2;
+      position: relative;
     }
     section {
       margin-bottom: 3rem;
     }
-    h1, h2 {
-      color: #2c3e50;
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(to right, #FF2F92, #531B93);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    footer {
-      background-color: #f1f1f1;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
+    ul {
+      padding-left: 1.5rem;
+    }
+    ul li {
+      margin-bottom: 0.75rem;
     }
     iframe {
-      border: none;
+      border: 1px solid #ccc;
+      border-radius: 6px;
       margin-top: 1rem;
     }
     a {
@@ -54,12 +77,39 @@
     a:hover {
       text-decoration: underline;
     }
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 4rem;
+    }
+    .button {
+      padding: 0.75rem 1.5rem;
+      background-color: #531B93;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #3e1470;
+    }
+    footer {
+      background-color: #ffffff;
+      color: #531B93;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Martin Preschel</h1>
-    <p>Junior Data Analyst | UX-Oriented Thinker | Visual Storyteller</p>
+    <p>Junior Data Analyst · UX-Oriented Thinker · Visual Storyteller</p>
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -72,31 +122,31 @@
     <section id="about">
       <h2>About Me</h2>
       <p>
-        Hi, I’m Martin – a former industrial designer who recently transitioned into data analytics. My design background taught me to think visually and user-centered, which I now combine with a structured, analytical mindset.
+        Hi, I’m Martin – a former industrial designer turned data analyst. My design background taught me to think visually and user-centered, which I now combine with a structured, analytical mindset.
       </p>
       <p>
-        Through my CareerFoundry training, I conducted end-to-end projects using Excel, SQL, Python, and Tableau – covering everything from data cleaning and visualization to regression analysis and dashboards. I’ve worked with real-world data in areas like healthcare, e-commerce, and mobility, always aiming to turn data into meaningful, actionable insights.
+        During my CareerFoundry training, I tackled end-to-end data projects using Excel, SQL, Python, and Tableau – covering everything from data cleaning and visualization to regression and clustering. I’ve worked with real-world datasets from healthcare, e-commerce, and mobility sectors.
       </p>
       <p>
-        What excites me most is using data to support clear, human-centered decisions. I’m now looking for a Junior Data Analyst role – ideally in a stable, purpose-driven environment where I can grow, collaborate, and contribute to impactful work.
+        I’m driven by the idea of turning data into clear, human-centered decisions – and I’m seeking a Junior Data Analyst role in a purpose-driven, collaborative environment.
       </p>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
       <ul>
-        <li><strong>Influenza – Preparing for Flu Season</strong> – <a href="influenza.html">Case Study</a></li>
+        <li><strong>Influenza – Preparing for Flu Season</strong> – <a href="influenza.html">View Project</a></li>
         <li><strong>Instacart Basket Analysis</strong> – <a href="https://github.com/MartinPreschel/Instacard-Basket-Data-Analysis.git" target="_blank">GitHub</a></li>
-        <li><strong>Medical Staffing for Influenza Season</strong> – <a href="https://public.tableau.com/views/StrategicMedicalStaffingforInluenzaSeason-AData-DrivenApproach/Story1" target="_blank">Tableau</a></li>
-        <li><strong>Airbnb in Amsterdam</strong> – <a href="https://github.com/MartinPreschel/AmsterdamBnB" target="_blank">GitHub</a> & <a href="https://public.tableau.com/views/AirbnbinAmsterdam-AData-DrivenExploration/Story1" target="_blank">Tableau</a></li>
+        <li><strong>Airbnb in Amsterdam</strong> – <a href="https://github.com/MartinPreschel/AmsterdamBnB" target="_blank">GitHub</a> · <a href="https://public.tableau.com/views/AirbnbinAmsterdam-AData-DrivenExploration/Story1" target="_blank">Tableau</a></li>
+        <li><strong>Medical Staffing Dashboard</strong> – <a href="https://public.tableau.com/views/StrategicMedicalStaffingforInluenzaSeason-AData-DrivenApproach/Story1" target="_blank">Tableau</a></li>
       </ul>
     </section>
 
     <section id="resume">
       <h2>Portfolio PDF</h2>
       <p>
-        <a href="Data_Analytics_Portfolio_Martin_Preschel_2025_Small_Version.pdf" download>
-          Download My Portfolio (PDF)
+        <a class="button" href="Data_Analytics_Portfolio_Martin_Preschel_2025_Small_Version.pdf" download>
+          Download Portfolio (PDF)
         </a>
       </p>
       <iframe 
@@ -112,8 +162,8 @@
       <p>Email: <a href="mailto:martin.preschel@gmail.com">martin.preschel@gmail.com</a></p>
       <p>Location: Hamburg, Germany</p>
       <p>Social: 
-        <a href="https://www.linkedin.com/in/martin-preschel-2292781a0" target="_blank">LinkedIn</a> | 
-        <a href="https://github.com/MartinPreschel" target="_blank">GitHub</a> | 
+        <a href="https://www.linkedin.com/in/martin-preschel-2292781a0" target="_blank">LinkedIn</a> · 
+        <a href="https://github.com/MartinPreschel" target="_blank">GitHub</a> · 
         <a href="https://public.tableau.com/app/profile/martin.preschel/vizzes" target="_blank">Tableau</a>
       </p>
     </section>
@@ -125,6 +175,11 @@
       Email: martin.preschel@gmail.com<br />
       Website: martinpreschel.github.io</p>
     </section>
+
+    <div class="button-row">
+      <a class="button" href="influenza.html">Go to First Case Study</a>
+      <a class="button" href="https://github.com/MartinPreschel">View My GitHub</a>
+    </div>
   </main>
 
   <footer>
