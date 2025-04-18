@@ -1,1 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instacart - Marketing Strategy for an Online Grocery Store.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto Mono', monospace;
+      background: linear-gradient(135deg, #e6e6e6, #ffffff);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #ffffff;
+      text-align: center;
+      padding: 2rem 1rem;
+      position: relative;
+    }
+    header h1 {
+      font-weight: 700;
+      font-size: 2rem;
+      background: linear-gradient(to right, #FF2F92, #531B93);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0;
+    }
+    header p {
+      font-weight: 400;
+      font-size: 1rem;
+    }
+    header img.vaccine {
+      position: absolute;
+      right: 2rem;
+      top: 1rem;
+      height: 140px;
+      opacity: 0.15;
+      z-index: 1;
+    }
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      z-index: 2;
+      position: relative;
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(to right, #FF2F92, #531B93);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    h3 {
+      font-weight: 700;
+      color: #2c3e50;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    p strong, ul strong {
+      font-weight: 500;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin: 1rem 0 0.25rem 0;
+    }
+    a {
+      color: #0077cc;
+      display: block;
+      margin-top: 0.25rem;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .highlight-box {
+      background: linear-gradient(to right, #FF2F92, #531B93);
+      color: white;
+      font-weight: 500;
+      border-radius: 12px;
+      display: inline-block;
+      padding: 1rem;
+      margin-top: 1.5rem;
+      max-width: 100%;
+    }
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 4rem auto 0 auto;
+      max-width: 900px;
+      padding: 0 1rem;
+    }
+    .button {
+      padding: 0.75rem 1.5rem;
+      background-color: #531B93;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #3e1470;
+    }
+    footer {
+      background-color: #ffffff;
+      color: #531B93;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Instacart - Marketing Strategy for an Online Grocery Store.</h1>
+    <p>A Tableau-driven Case Study</p>
+    <img src="images/vaccine.svg" alt="Vaccine Icon" class="vaccine">
+  </header>
 
+  <main>
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Data wrangling</strong></li>
+        <li><strong>Data merging</strong></li>
+        <li><strong>Deriving variables</strong></li>
+        <li><strong>Grouping data</strong></li>
+        <li><strong>Aggregating data</strong></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Tools</h2>
+      <ul>
+          <li><strong>Python</strong></li>
+          <li><strong>Excel</strong></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Procedures</h2>
+      <ul>
+          <li><strong>Cleaning & transforming data (Data wrangling)</strong></li>
+          <li><strong>Merging datasets for comprehensive analysis</strong></li>
+          <li><strong>Calculating population flows & derived metrics</strong></li>
+          <li><strong>Reporting & visualization in Excel</strong></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Project Overview</h2>
+      <p><strong>Context:</strong> Every flu season, hospitals face staffing challenges due to increased patient load, especially among high-risk populations.</p>
+      <p><strong>Key Questions:</strong></p>
+      <ul>
+        <li>Which states are most impacted?</li>
+        <li>How do age, population density, and vaccinations affect staffing?</li>
+        <li>When do flu peaks occur?</li>
+      </ul>
+      <p><strong>Why It Matters:</strong></p>
+      <ul>
+        <li>Prevents understaffing (avoiding overwhelmed hospitals)</li>
+        <li>Reduces overstaffing (efficient resource use)</li>
+      </ul>
+      <div class="highlight-box">
+        "Where & when should staff be deployed?"
+      </div>
+      <img src="images/flu_deaths_by_age.png" alt="Flu Deaths by Age">
+      <a href="https://public.tableau.com/app/profile/martin.preschel/viz/Influenza-Casestudy/FluDeathsbyAge" target="_blank">View this chart on Tableau Public</a>
+    </section>
+
+    <section>
+      <h2>Key Insights</h2>
+      <ul>
+        <li>90% of flu deaths occur in the 65+ age group</li>
+        <li>High-risk states: California, Florida, Texas</li>
+        <li>Low vaccination = Higher flu deaths</li>
+        <li>Strong correlation (r = 0.94) between age & flu deaths</li>
+        <li>Higher population density = faster flu spread</li>
+      </ul>
+      <div class="highlight-box">
+        "Flu peaks vary by state—staffing must be adaptive and prioritize high-risk states & seniors."
+      </div>
+      <img src="images/heatmap_65plus.png" alt="Heatmap showing flu deaths in the elderly by state">
+      <a href="https://public.tableau.com/app/profile/martin.preschel/viz/Influenza-Casestudy/Heatmap65plus" target="_blank">View this chart on Tableau Public</a>
+    </section>
+
+    <section>
+      <h2>Data Spread & Correlation</h2>
+      <img src="images/data_spread_correlation.png" alt="Data Spread and Correlation">
+    </section>
+
+    <section>
+      <h2>Visualizing the Findings</h2>
+      <h3>📊 Flu Trends Over Time</h3>
+      <ul>
+        <li>Flu deaths fluctuate yearly & vary by region</li>
+        <li>Some states experience sharper seasonal spikes</li>
+        <li>Staffing must be flexible & data-driven</li>
+      </ul>
+      <h3>📈 Correlation Between Age & Flu Deaths</h3>
+      <ul>
+        <li>Aging populations experience higher flu mortality</li>
+        <li>Staffing must align with demographic risk factors</li>
+      </ul>
+      <div class="highlight-box">
+        "Data-driven staffing ensures hospitals are prepared for seasonal demand."
+      </div>
+      <img src="images/linechart_trends.png" alt="Line chart showing flu deaths over time by state">
+      <a href="https://public.tableau.com/app/profile/martin.preschel/viz/Influenza-Casestudy/LineChartTrends" target="_blank">View Line Chart on Tableau Public</a>
+      <img src="images/scatterplot_age_deaths.png" alt="Scatterplot of age vs. flu deaths">
+      <a href="https://public.tableau.com/app/profile/martin.preschel/viz/Influenza-Casestudy/AgeDeathScatter" target="_blank">View Scatterplot on Tableau Public</a>
+    </section>
+
+    <section>
+      <h2>Recommendations & Next Steps</h2>
+      <h3>📍 Strategic Actions for GameCo</h3>
+      <ul>
+        <li><strong>Prioritize high-risk states</strong> (California, Florida, Texas)</li>
+        <li><strong>Adjust staffing</strong> based on flu season peaks</li>
+        <li><strong>Target under-vaccinated regions</strong> for better prevention</li>
+      </ul>
+      <h3>🔍 Next Steps</h3>
+      <ul>
+        <li>Pilot a <strong>flexible staffing</strong> program in high-risk areas</li>
+        <li>Develop <strong>early warning systems</strong> for flu outbreaks</li>
+        <li>Refine staffing predictions with <strong>vaccination effectiveness analysis</strong></li>
+      </ul>
+      <div class="highlight-box">
+        "Proactive planning can prevent flu-related hospital overload."
+      </div>
+      <img src="images/bubblechart_risks.png" alt="Bubble Chart – Flu Deaths vs. 65+ Population by State">
+      <a href="https://public.tableau.com/app/profile/martin.preschel/viz/Influenza-Casestudy/65PlusBubble" target="_blank">View this chart on Tableau Public</a>
+    </section>
+  </main>
+
+  <div class="button-row">
+    <a class="button" href="index.html">← Back to Start</a>
+    <a class="button" href="airbnb.html">Next: Airbnb in Amsterdam →</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Martin Preschel</p>
+  </footer>
+</body>
+</html>
