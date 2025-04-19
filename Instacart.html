@@ -123,6 +123,19 @@
       -webkit-background-clip: initial;
       -webkit-text-fill-color: initial;
     }
+    .skills-section {
+      position: relative;
+      padding-right: 120px; /* Platz rechts für die Spritze */
+    }
+    .syringe-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 280px;
+      opacity: 0.08;
+      z-index: 0;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
@@ -133,7 +146,9 @@
   </header>
 
   <main>
-    <section>
+    <section class="skills-section">
+      <img src="images/vaccine.svg" alt="Decorative Syringe" class="syringe-right">
+
       <h2><span class="emoji">📚</span> Skills</h2>
       <ul>
         <li>Data wrangling</li>
@@ -142,17 +157,13 @@
         <li>Grouping data</li>
         <li>Aggregating data</li>
       </ul>
-    </section>
 
-    <section>
       <h2><span class="emoji">🛠</span> Tools</h2>
       <ul>
           <li>Python</li>
           <li>Excel</li>
       </ul>
-    </section>
 
-    <section>
       <h2><span class="emoji">📊</span> Procedures</h2>
       <ul>
           <li>Cleaning & transforming data (Data wrangling)</li>
