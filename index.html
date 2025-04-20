@@ -17,6 +17,7 @@
       background: #ffffff;
       text-align: center;
       padding: 2rem 1rem;
+      position: relative;
     }
     header h1 {
       font-weight: 700;
@@ -46,6 +47,11 @@
       padding: 2rem;
       max-width: 900px;
       margin: auto;
+      z-index: 2;
+      position: relative;
+    }
+    section {
+      margin-bottom: 3rem;
     }
     h2 {
       font-size: 1.5rem;
@@ -54,33 +60,32 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+    ul {
+      padding-left: 1.5rem;
     }
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      border: 1px solid #eee;
+    ul li {
+      margin-bottom: 0.75rem;
+    }
+    iframe {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 1rem;
+    }
+    a {
+      color: #0077cc;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .button-row {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-end;
+      margin: 4rem auto 0 auto;
+      max-width: 900px;
+      padding: 0 1rem;
     }
-    .card h3 {
-      font-size: 1.25rem;
-      color: #531B93;
-      margin: 0;
-    }
-    .card p {
-      margin: 0.75rem 0 1.25rem;
-    }
-    .card a.button {
+    .button {
       display: inline-block;
-      width: auto;
       padding: 0.5rem 1rem;
       background-color: #531B93;
       color: white;
@@ -90,10 +95,25 @@
       font-weight: 700;
       text-decoration: none;
       transition: background-color 0.3s;
-      max-width: 100%;
     }
-    .card a.button:hover {
+    .button:hover {
       background-color: #3e1470;
+    }
+    .project-box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border: 1px solid #eee;
+    }
+    .project-box h3 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #531B93;
+    }
+    .project-box p {
+      margin-bottom: 1.5rem;
     }
     footer {
       background-color: #ffffff;
@@ -109,48 +129,92 @@
     <h1>Martin Preschel</h1>
     <p>Junior Data Analyst · UX-Oriented Thinker · Visual Storyteller</p>
     <nav>
+      <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
+      <a href="#resume">Resume</a>
     </nav>
   </header>
-
   <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Hi, I’m Martin – a former industrial designer turned data analyst. My design background taught me to think visually and user-centered, which I now combine with a structured, analytical mindset.
+      </p>
+      <p>
+        During my CareerFoundry training, I tackled end-to-end data projects using Excel, SQL, Python, and Tableau – covering everything from data cleaning and visualization to regression and clustering. I’ve worked with real-world datasets from healthcare, e-commerce, and mobility sectors.
+      </p>
+      <p>
+        I’m driven by the idea of turning data into clear, human-centered decisions – and I’m seeking a Junior Data Analyst role in a purpose-driven, collaborative environment.
+      </p>
+    </section>
+
     <section id="projects">
       <h2>Projects</h2>
-      <div class="grid">
-        <div class="card">
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#531B93" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-              <path d="M17 3l4 4" />
-              <path d="M19 5l-4.5 4.5" />
-              <path d="M11.5 6.5l6 6" />
-              <path d="M16.5 11.5l-6.5 6.5h-4v-4l6.5 -6.5" />
-              <path d="M7.5 12.5l1.5 1.5" />
-              <path d="M10.5 9.5l1.5 1.5" />
-              <path d="M3 21l3 -3" />
-            </svg>
-            <h3>Influenza</h3>
-          </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
+
+        <div class="project-box">
+          <h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#531B93" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 3l4 4" /><path d="M19 5l-4.5 4.5" /><path d="M11.5 6.5l6 6" /><path d="M16.5 11.5l-6.5 6.5h-4v-4l6.5 -6.5" /><path d="M7.5 12.5l1.5 1.5" /><path d="M10.5 9.5l1.5 1.5" /><path d="M3 21l3 -3" /></svg>
+            Influenza
+          </h3>
           <p>Public health planning using predictive staffing models and Tableau dashboards.</p>
           <a class="button" href="influenza.html">View Case Study</a>
         </div>
 
-        <div class="card">
-          <h3>Instacart</h3>
+        <div class="project-box">
+          <h3>🛒 Instacart</h3>
           <p>Marketing strategy insights through customer segmentation and sales analysis.</p>
           <a class="button" href="instacart.html">View Case Study</a>
         </div>
 
-        <div class="card">
-          <h3>AmsterdamBnB</h3>
+        <div class="project-box">
+          <h3>🏙️ AmsterdamBnB</h3>
           <p>Urban Airbnb trends, clustering, and pricing analysis with geospatial visualizations.</p>
           <a class="button" href="amsterdamBnB.html">View Case Study</a>
         </div>
+
       </div>
     </section>
-  </main>
 
+    <section id="resume">
+      <h2>Portfolio PDF</h2>
+      <p>
+        <a class="button" href="Data_Analytics_Portfolio_Martin_Preschel_2025_Small_Version.pdf" download>
+          Download Portfolio (PDF)
+        </a>
+      </p>
+      <iframe 
+        src="Data_Analytics_Portfolio_Martin_Preschel_2025_Small_Version.pdf" 
+        width="100%" 
+        height="600px" 
+        title="Martin Preschel Portfolio PDF">
+      </iframe>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:martin.preschel@gmail.com">martin.preschel@gmail.com</a></p>
+      <p>Location: Hamburg, Germany</p>
+      <p>Social: 
+        <a href="https://www.linkedin.com/in/martin-preschel-2292781a0" target="_blank">LinkedIn</a> · 
+        <a href="https://github.com/MartinPreschel" target="_blank">GitHub</a> · 
+        <a href="https://public.tableau.com/app/profile/martin.preschel/vizzes" target="_blank">Tableau</a>
+      </p>
+    </section>
+
+    <section id="impressum">
+      <h2>Impressum</h2>
+      <p>Martin Preschel<br />
+      Hamburg, Germany<br />
+      Email: martin.preschel@gmail.com<br />
+      Website: martinpreschel.github.io</p>
+    </section>
+
+    <div class="button-row">
+      <a class="button" href="influenza.html">Go to First Case Study →</a>
+    </div>
+  </main>
   <footer>
     <p>&copy; 2025 Martin Preschel</p>
   </footer>
