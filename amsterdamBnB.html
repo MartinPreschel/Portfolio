@@ -71,6 +71,10 @@
       height: auto;
       margin: 1rem 0 0.25rem 0;
     }
+    iframe {
+      margin: 1rem 0;
+      border: none;
+    }
     a {
       color: #0077cc;
       display: block;
@@ -133,11 +137,95 @@
   </header>
 
   <main>
-    <!-- Sections for Skills, Tools, Procedures, Overview, Insights, Modeling, Final Takeaways etc. to be added next -->
+    <section>
+      <h2><span class="emoji">📚</span> Skills</h2>
+      <ul>
+        <li>Data wrangling & EDA</li>
+        <li>Regression & clustering (K-Means)</li>
+        <li>Geospatial & correlation analysis</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="emoji">🛠</span> Tools</h2>
+      <ul>
+        <li>Python (Pandas, GeoPandas, Scikit-learn)</li>
+        <li>Jupyter Notebook, Tableau</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="emoji">📊</span> Procedures</h2>
+      <ul>
+        <li>Cleaning Airbnb open data</li>
+        <li>Analyzing pricing by host & room type</li>
+        <li>Modeling nightly prices</li>
+        <li>Segmenting listings into clusters</li>
+        <li>Visualizing insights with Tableau</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Project Overview</h2>
+      <p><strong>📌 Context:</strong></p>
+      <ul>
+        <li>Amsterdam's tourism boom drives demand in the Airbnb market.</li>
+        <li>This open data project explores price drivers, host behavior, availability, and segmentation.</li>
+      </ul>
+      <p><strong>❓ Key Questions:</strong></p>
+      <ul>
+        <li>What drives nightly prices?</li>
+        <li>How do host status and room type affect pricing?</li>
+        <li>Can we identify meaningful customer segments?</li>
+        <li>How does availability vary across neighborhoods?</li>
+      </ul>
+      <img src="price_distribution_room.jpg" alt="Price Distribution by Room Type">
+    </section>
+
+    <section>
+      <h2><span class="emoji">🗺️</span> Neighborhood Pricing</h2>
+      <p><strong>Insight:</strong> Central areas like Jordaan and De Pijp are significantly more expensive.</p>
+      <iframe src="choropleth_map.html" width="100%" height="600"></iframe>
+    </section>
+
+    <section>
+      <h2><span class="emoji">📈</span> Price Drivers</h2>
+      <p><strong>Does guest capacity influence price?</strong> A moderate upward trend exists, but other factors play stronger roles.</p>
+      <img src="accommodates_price.jpg" alt="Accommodates vs. Price per Night">
+    </section>
+
+    <section>
+      <h2><span class="emoji">🧠</span> Modeling & Clustering</h2>
+      <p><strong>Linear Regression:</strong> Shows weak explanatory power – not sufficient alone.</p>
+      <img src="test_set_regression.jpg" alt="Linear Regression Test Set">
+
+      <p><strong>K-Means Clustering:</strong> Identified 3 key segments:</p>
+      <ul>
+        <li><strong>Premium stays</strong>: high availability & guest capacity</li>
+        <li><strong>Compact urban</strong>: low capacity, high turnover</li>
+        <li><strong>Peripheral budget</strong>: low price, high availability</li>
+      </ul>
+      <img src="guests_availability.jpg" alt="Guests vs. Availability by Cluster">
+    </section>
+
+    <section>
+      <h2>Final Takeaways</h2>
+      <ul>
+        <li><strong>Room type</strong> is the most influential price driver.</li>
+        <li><strong>Location matters</strong> – central areas are pricier.</li>
+        <li><strong>Superhost status</strong> only slightly affects price.</li>
+        <li><strong>Guest capacity</strong> has moderate impact.</li>
+        <li><strong>Regression is limited</strong>, clustering is more insightful.</li>
+      </ul>
+      <div class="highlight-box">
+        "From raw data to real insights – AmsterdamBnB reveals how data can guide smarter Airbnb decisions."
+      </div>
+    </section>
   </main>
 
   <div class="button-row">
     <a class="button" href="index.html">← Back to Start</a>
+    <a class="button" href="influenza.html">Go to Next Case Study →</a>
   </div>
 
   <footer>
