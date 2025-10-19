@@ -5,135 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Martin Preschel – Data Analytics Portfolio</title>
   <style>
-    /* ====== Base Setup ====== */
-    :root {
-      --accent: #334155;
-      --accent-hover: #1E40AF;
-      --bg: #FAFAFA;
-      --text: #1F2937;
-      --muted: #6B7280;
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
     body {
-      font-family: 'Poppins', system-ui, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
+      background-color: #f7f7f7;
+      margin: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      text-align: center;
+      height: 100vh;
+      font-family: system-ui, sans-serif;
     }
-
-    /* ====== Intro Section ====== */
-    h1 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
+    iframe {
+      width: 90vw;
+      height: 90vh;
+      border: none;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      background: white;
     }
-
-    p.subtitle {
-      font-size: 1.05rem;
-      color: var(--muted);
-      margin-bottom: 2.5rem;
-    }
-
-    /* ====== Button ====== */
-    .button {
-      display: inline-block;
-      background-color: var(--accent);
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-      padding: 0.9rem 1.8rem;
-      border-radius: 8px;
-      transition: background-color 0.25s ease, transform 0.1s ease-in;
-    }
-
-    .button:hover {
-      background-color: var(--accent-hover);
-      transform: translateY(-2px);
-    }
-
-    /* ====== Footer ====== */
     footer {
-      position: fixed;
-      bottom: 20px;
-      font-size: 0.9rem;
-      color: var(--muted);
+      margin-top: 1rem;
       text-align: center;
-      width: 100%;
+      font-size: 0.9rem;
+      color: #555;
     }
-
     footer a {
-      color: var(--accent-hover);
+      color: #1E40AF;
       text-decoration: none;
-      margin: 0 0.4rem;
+      margin: 0 0.5rem;
       font-weight: 500;
     }
-
     footer a:hover {
       text-decoration: underline;
-    }
-
-    /* ====== PDF Container (hidden at start) ====== */
-    #pdf-viewer {
-      display: none;
-      width: 100%;
-      height: 100vh;
-      border: none;
-    }
-
-    /* ====== Fade Animation ====== */
-    .fade-out {
-      animation: fadeOut 0.6s ease forwards;
-    }
-    @keyframes fadeOut {
-      from { opacity: 1; }
-      to { opacity: 0; visibility: hidden; }
     }
   </style>
 </head>
 <body>
+  <!-- === PDF Viewer === -->
+  <iframe src="Data_Analytics_Portfolio_Martin_Preschel_2025_Small_Version.pdf"></iframe>
 
-  <!-- ====== Intro Screen ====== -->
-  <div id="intro">
-    <h1>Welcome to my Data Analytics Portfolio</h1>
-    <p class="subtitle">Explore my case studies, dashboards, and analytical work.</p>
-    <a href="#" id="open-btn" class="button">Open Portfolio PDF</a>
-  </div>
-
-  <!-- ====== PDF Viewer ====== -->
-  <iframe id="pdf-viewer" src="Data_Analytics_Portfolio_Martin_Preschel_2025_Small_Version.pdf"></iframe>
-
-  <!-- ====== Footer ====== -->
+  <!-- === Footer with Links === -->
   <footer>
     <a href="mailto:martin.preschel@gmail.com">martin.preschel@gmail.com</a> ·
     <a href="https://www.linkedin.com/in/martin-preschel-2292781a0" target="_blank">LinkedIn</a> ·
     <a href="https://public.tableau.com/app/profile/martin.preschel/vizzes" target="_blank">Tableau</a> ·
     <a href="https://github.com/MartinPreschel" target="_blank">GitHub</a>
   </footer>
-
-  <!-- ====== Script for Button ====== -->
-  <script>
-    const button = document.getElementById('open-btn');
-    const intro = document.getElementById('intro');
-    const pdf = document.getElementById('pdf-viewer');
-
-    button.addEventListener('click', function(e) {
-      e.preventDefault();
-      intro.classList.add('fade-out');
-      setTimeout(() => {
-        intro.style.display = 'none';
-        pdf.style.display = 'block';
-      }, 600);
-    });
-  </script>
 </body>
 </html>
