@@ -20,43 +20,38 @@
   ============================ -->
   <style>
 /* =====================================================
-   Modern Look – Navigation, Typografie & Spacing (v2)
+   CV-Look Integration – Portfolio 2.2
    ===================================================== */
 
-/* ===== Fonts & Grundlinie ===== */
+/* ===== Farben & Grundlinien ===== */
 body {
-  font-family: 'Source Sans 3', sans-serif;
-  color: var(--text);
-  background-color: var(--page-bg);
-  line-height: 1.7;
+  background-color: #FAFAFA;
+  color: #1F2937;
+  line-height: 1.75;
   font-size: 1.05rem;
 }
 
 /* ===== Header ===== */
 header {
-  background: #fff;
   text-align: center;
-  padding: 5rem 1rem 3rem;
-  border-bottom: 1px solid #eaeaea;
+  padding: 4.5rem 1rem 3rem;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E5E7EB;
 }
 
-/* Name */
 header h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 2.4rem;
-  color: var(--heading);
-  letter-spacing: 0.3px;
-  margin-bottom: 0.75rem;
+  font-size: 2.3rem;
+  color: #1E2B4F; /* dunkles Blau wie im CV */
+  margin-bottom: 0.4rem;
 }
 
-/* Subtitle */
 header p {
-  color: var(--muted);
-  font-weight: 400;
+  font-family: 'Source Sans 3', sans-serif;
+  color: #4B5563;
   font-size: 1.1rem;
-  letter-spacing: 0.3px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.2rem;
 }
 
 /* ===== Navigation ===== */
@@ -64,30 +59,27 @@ nav {
   display: flex;
   justify-content: center;
   gap: 3rem;
-  margin-top: 0;
+  letter-spacing: 0.05rem;
 }
 
 nav a {
   font-family: 'Poppins', sans-serif;
-  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  font-weight: 500;
   font-size: 0.95rem;
-  color: var(--heading);
+  color: #1E2B4F;
   text-decoration: none;
   position: relative;
-  transition: color 0.25s ease;
 }
 
-/* dezent animierte Linie */
 nav a::after {
   content: "";
   position: absolute;
-  left: 0;
   bottom: -6px;
+  left: 0;
   width: 100%;
-  height: 2px;
-  background-color: var(--accent);
+  height: 1.5px;
+  background-color: #1E2B4F;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease;
@@ -98,31 +90,73 @@ nav a:hover::after {
   transform-origin: left;
 }
 
-nav a:hover {
-  color: var(--accent);
-}
-
-/* ===== Section Layout ===== */
-main {
-  padding: 4rem 1.5rem 2rem;
-  max-width: 950px;
-  margin: 0 auto;
-}
-
-/* ===== Überschriften ===== */
+/* ===== Section Titles ===== */
 h2 {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  color: var(--heading);
-  font-size: 1.8rem;
+  color: #1E2B4F;
+  font-size: 1.6rem;
+  border-bottom: 2px solid #E5E7EB;
+  padding-bottom: 0.3rem;
   margin-bottom: 1.5rem;
+  letter-spacing: 0.3px;
 }
 
 /* ===== About Section ===== */
 #about {
-  background: #ffffff;
-  pa
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.03);
+  margin-bottom: 4rem;
+}
 
+/* ===== Text Absätze ===== */
+p {
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+  color: #374151;
+}
+
+/* ===== Projects ===== */
+.project-box {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.project-box h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1E2B4F;
+  margin-bottom: 0.5rem;
+}
+
+.project-box p {
+  color: #4B5563;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #FFFFFF;
+  color: #4B5563;
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid #E5E7EB;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
   </style>
 </head>
 <body>
