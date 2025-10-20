@@ -1,55 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Martin Preschel – Data Analytics Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Martin Preschel — Portfolio (Test)</title>
+
+  <!-- Fonts (neutral, wie im späteren Design) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      background-color: #f7f7f7;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: system-ui, sans-serif;
+    /* =====================================================
+       0) DESIGN-VARIABLEN — wir bleiben bewusst neutral.
+       Später füllen wir Farben/Bilder in Schritt 2/3 ein.
+       ===================================================== */
+    :root{
+      --bg: #FAFAFA;
+      --surface: #FFFFFF;
+      --ink: #0F172A;      /* sehr dunkles Grau statt Schwarz */
+      --muted: #475569;    /* Sekundärtext */
+      --line: #E5E7EB;     /* Linien/Trennungen */
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(0,0,0,.05);
+
+      /* Rhythmus / Spacing */
+      --maxw: 1120px;
+      --gutter: 20px;
+      --hero-pad-y: 64px;
+      --section-pad-y: 72px;
     }
-    iframe {
-      width: 90vw;
-      height: 90vh;
-      border: none;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      background: white;
+
+    /* Basis */
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      background:var(--bg);
+      color:var(--ink);
+      font-family:'Source Sans 3', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      line-height:1.7;
+      font-size: 18px; /* Grundgröße angenehm lesbar */
     }
-    footer {
-      margin-top: 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #555;
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:0 var(--gutter);}
+    .stack{display:flex; flex-direction:column; gap:24px;}
+
+    /* ===== Navigation (schmal, oben rechts Links) ===== */
+    .nav{
+      border-bottom:1px solid var(--line);
+      background: var(--surface);
     }
-    footer a {
-      color: #1E40AF;
-      text-decoration: none;
-      margin: 0 0.5rem;
-      font-weight: 500;
+    .nav-inner{
+      height:60px; display:flex; align-items:center; justify-content:space-between;
     }
-    footer a:hover {
-      text-decoration: underline;
+    .brand{font-family:'Poppins',sans-serif; font-weight:700; letter-spacing:.2px}
+    .menu{display:flex; gap:24px}
+    .menu a{color:var(--ink); text-decoration:none; font-weight:600; font-size:15px}
+    .menu a:hover{text-decoration:underline}
+
+    /* ===== HERO (links großer Claim, rechts Button) ===== */
+    .hero{
+      background: var(--surface);
+      padding: var(--hero-pad-y) 0;
+      border-bottom:1px solid var(--line);
+    }
+    .hero-grid{
+      display:grid; gap:24px;
+      grid-template-columns: 1.2fr .8fr; /* große Headline links, CTA rechts */
+    }
+    .kicker{color:var(--muted); font-weight:600; letter-spacing:.1em; text-transform:uppercase; font-size:14px}
+    .h-xxl{
+      font-family:'Poppins',sans-serif; font-weight:700;
+      font-size: clamp(36px, 7vw, 64px); line-height:1.05;
+    }
+    .sub{color:var(--muted)}
+    .cta{
+      align-self:start; justify-self:end;
+      display:flex; gap:12px; flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-block; text-decoration:none; color:var(--ink);
+      background:#F3F4F6; padding:12px 18px; border-radius:999px; border:1px solid var(--line);
+      font-weight:700; letter-spacing:.2px; font-family:'Poppins',sans-serif; font-size:15px;
+    }
+
+    /* ===== Section Headline („The Work.“ / „The Method.“) ===== */
+    .section{
+      padding: var(--section-pad-y) 0;
+    }
+    .section .eyebrow{
+      color:var(--muted); text-transform:uppercase; letter-spacing:.08em; font-weight:600; font-size:13px;
+    }
+    .section .title{
+      font-family:'Poppins',sans-serif; font-weight:700;
+      font-size: clamp(28px, 5vw, 44px); line-height:1.05;
+    }
+    .section .lead{color:var(--muted)}
+
+    /* ===== Drei Karten (nur Platzhalter; Bilder/Farben später) ===== */
+    .cards{
+      margin-top:28px;
+      display:grid; gap:20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card{
+      background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+      box-shadow: var(--shadow); padding:16px;
+      display:flex; flex-direction:column; gap:12px; text-decoration:none; color:inherit;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .card:hover{ transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0,0,0,.08); }
+    .thumb{
+      height:140px; border-radius:10px; background:#EAEAEA; /* später farbig / Bild */
+    }
+    .card h3{font-family:'Poppins',sans-serif; font-size:18px; font-weight:700; margin:2px 0}
+    .card p{color:var(--muted); font-size:16px; margin:0}
+
+    /* ===== Method-Liste (noch ohne Interaktion) ===== */
+    .method{
+      background: var(--ink); color: #fff;
+      padding: var(--section-pad-y) 0;
+      border-top:1px solid var(--line);
+    }
+    .method .title{color:#fff}
+    .method-list{
+      margin-top:20px; border-top:1px solid rgba(255,255,255,.15);
+    }
+    .method-item{
+      display:flex; justify-content:space-between; align-items:center;
+      padding:18px 0; border-bottom:1px solid rgba(255,255,255,.12);
+      color:#E5E7EB; font-weight:600;
+    }
+    .method-item .plus{opacity:.7}
+
+    /* ===== Footer ===== */
+    footer{
+      padding:40px 0; color:var(--muted); font-size:14px; text-align:center;
+    }
+
+    /* Responsive Kleinzeug */
+    @media (max-width: 820px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .cta{ justify-self:start; }
     }
   </style>
 </head>
 <body>
-  <!-- === PDF Viewer === -->
-  <iframe src="Data_Analytics_Portfolio_Martin_Preschel_2025_Small_Version.pdf"></iframe>
 
-  <!-- === Footer with Links === -->
-  <footer>
-    <a href="mailto:martin.preschel@gmail.com">martin.preschel@gmail.com</a> ·
-    <a href="https://www.linkedin.com/in/martin-preschel-2292781a0" target="_blank">LinkedIn</a> ·
-    <a href="https://public.tableau.com/app/profile/martin.preschel/vizzes" target="_blank">Tableau</a> ·
-    <a href="https://github.com/MartinPreschel" target="_blank">GitHub</a>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="wrap nav-inner">
+      <div class="brand">MARTIN PRESCHEL</div>
+      <nav class="menu">
+        <a href="#work">work</a>
+        <a href="#method">method</a>
+        <a href="#contact">contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO (nur Text + Buttons; Farben/Bilder in Schritt 2/3) -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="stack">
+        <div class="kicker">Data + UX</div>
+        <h1 class="h-xxl">Strategic. <br/>Analytical. <br/>Human-centered.</h1>
+        <p class="sub">I help teams make clear, evidence-based decisions — with clean analysis and concise visuals.</p>
+      </div>
+      <div class="cta">
+        <a class="btn" href="Data_Analytics_Portfolio_Martin_Preschel_2025_Small_Version.pdf" target="_blank" rel="noopener">Open Portfolio (PDF)</a>
+        <a class="btn" href="mailto:martin.preschel@gmail.com">Get in touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- THE WORK -->
+  <section id="work" class="section">
+    <div class="wrap">
+      <div class="stack" style="gap:10px">
+        <div class="eyebrow">Portfolio</div>
+        <h2 class="title">The Work.</h2>
+        <p class="lead">A short selection. Full case studies inside the PDF.</p>
+      </div>
+
+      <div class="cards">
+        <!-- Karte 1 -->
+        <a class="card" href="Data_Analytics_Portfolio_Martin_Preschel_2025_Small_Version.pdf#page=6" target="_blank" rel="noopener">
+          <div class="thumb"><!-- später: Bild/Farbe --></div>
+          <h3>Influenza — staffing & surge planning</h3>
+          <p>Forecasting + dashboards for hospital capacity decisions.</p>
+        </a>
+        <!-- Karte 2 -->
+        <a class="card" href="Data_Analytics_Portfolio_Martin_Preschel_2025_Small_Version.pdf#page=12" target="_blank" rel="noopener">
+          <div class="thumb"></div>
+          <h3>Instacart — segmentation & cohorts</h3>
+          <p>RFM & cohort analysis to drive marketing strategy.</p>
+        </a>
+        <!-- Karte 3 -->
+        <a class="card" href="Data_Analytics_Portfolio_Martin_Preschel_2025_Small_Version.pdf#page=17" target="_blank" rel="noopener">
+          <div class="thumb"></div>
+          <h3>AmsterdamBnB — pricing & clusters</h3>
+          <p>Geo analysis & clustering to explain urban patterns.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE METHOD (schwarzer Block; nur Layout) -->
+  <section id="method" class="method">
+    <div class="wrap">
+      <div class="stack" style="gap:10px">
+        <div class="eyebrow" style="color:#CBD5E1">Approach</div>
+        <h2 class="title">The Method.</h2>
+        <p class="lead" style="color:#CBD5E1">Bespoke analysis and visual storytelling for clear decisions.</p>
+      </div>
+
+      <div class="method-list">
+        <div class="method-item"><span>Strategic framing</span><span class="plus">+</span></div>
+        <div class="method-item"><span>Exploration → Modeling → Validation</span><span class="plus">+</span></div>
+        <div class="method-item"><span>Dashboards & concise narratives</span><span class="plus">+</span></div>
+        <div class="method-item"><span>Stakeholder-friendly delivery</span><span class="plus">+</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="wrap">
+      © 2025 Martin Preschel ·
+      <a href="mailto:martin.preschel@gmail.com">martin.preschel@gmail.com</a> ·
+      <a href="https://www.linkedin.com/in/martin-preschel-2292781a0" target="_blank" rel="noopener">LinkedIn</a> ·
+      <a href="https://github.com/MartinPreschel" target="_blank" rel="noopener">GitHub</a>
+    </div>
   </footer>
+
 </body>
 </html>
+
