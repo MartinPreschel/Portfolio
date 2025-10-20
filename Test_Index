@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Martin Preschel – Data Analytics Portfolio</title>
+  <style>
+    body {
+      background-color: #f7f7f7;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: system-ui, sans-serif;
+    }
+    iframe {
+      width: 90vw;
+      height: 90vh;
+      border: none;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      background: white;
+    }
+    footer {
+      margin-top: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    footer a {
+      color: #1E40AF;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      font-weight: 500;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- === PDF Viewer === -->
+  <iframe src="Data_Analytics_Portfolio_Martin_Preschel_2025_Small_Version.pdf"></iframe>
+
+  <!-- === Footer with Links === -->
+  <footer>
+    <a href="mailto:martin.preschel@gmail.com">martin.preschel@gmail.com</a> ·
+    <a href="https://www.linkedin.com/in/martin-preschel-2292781a0" target="_blank">LinkedIn</a> ·
+    <a href="https://public.tableau.com/app/profile/martin.preschel/vizzes" target="_blank">Tableau</a> ·
+    <a href="https://github.com/MartinPreschel" target="_blank">GitHub</a>
+  </footer>
+</body>
+</html>
