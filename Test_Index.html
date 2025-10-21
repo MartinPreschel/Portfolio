@@ -80,6 +80,36 @@
       background:#F3F4F6; padding:12px 18px; border-radius:999px; border:1px solid var(--line);
       font-weight:700; letter-spacing:.2px; font-family:'Poppins',sans-serif; font-size:15px;
     }
+    /* --- Hero Text Layout --- */
+.hero-text {
+  text-align: left;
+}
+
+.hero-text .h-xxl {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 0.3rem;
+}
+
+.hero-text .year {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #475569; /* dezentes Grau */
+  margin-bottom: 2.5rem;
+}
+
+.signature .name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #0F172A; /* dunkler, neutraler Ton */
+  margin-bottom: 0.25rem;
+}
+
+.signature .role {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #334155; /* leicht helleres Grau */
+}
 
     /* ===== Section Headline („The Work.“ / „The Method.“) ===== */
     .section{
@@ -161,12 +191,16 @@
   <header class="hero">
     <div class="wrap hero-grid">
       <div class="stack">
-       <h1 class="h-xxl">Data Analytics <br/>Portfolio</h1>
-        
-        <div class="sub-info">
-          <p class="name">Martin Preschel</p>
-          <p class="role">Data Analyst · UX-orientiert · Fokus auf BI & Visualisierung</p>
-        </div>
+       <div class="hero-text">
+  <h1 class="h-xxl">Data Analytics <br/>Portfolio</h1>
+  <p class="year">2025</p>
+
+  <div class="signature">
+    <p class="name">Martin Preschel</p>
+    <p class="role">Data Analyst · UX-orientiert · Fokus auf BI & Visualisierung</p>
+  </div>
+</div>
+
 
       <div class="cta">
         <a class="btn" href="Data_Analytics_Portfolio_Martin_Preschel_2025_Small_Version.pdf" target="_blank" rel="noopener">Open Portfolio (PDF)</a>
